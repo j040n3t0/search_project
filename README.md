@@ -1,2 +1,2 @@
-# search_project
-Using Elasticsearch with feature Search As You Type
+# elk_crud
+Web CRUD with Elasticsearch + Python
