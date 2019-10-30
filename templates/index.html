@@ -29,12 +29,31 @@
 </head>
 <body>
 
-<form>
+<form id='buscar'>
 	<h2>Elasticsearch | Search as you type</h2>
 	<h3>By: João Neto</h3>
-	Busca: <input type="text" size="30" onkeyup="showResult(this.value)">
-	<div id="livesearch" ></div>
+	Busca: <input id='searchInput'type="text" size="30" onkeyup="showResult(this.value)">
+	<div id="livesearch"></div>
 </form>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript">
+$('form#buscar').ready(function() {
+	$('#buscar').on('submit', function(event) {
+	  $.ajax({
+	    data : {
+	      q: $('#searchInput').val(),
+	    },
+	  type : 'GET',
+	  url : '/search?'
+	  })
+	  .done(function(data) {
+	    console.log(data);
+	  });
+	  event.preventDefault();
+	});
+});
+</script>
 	<!--
 	Referência 
 	https://www.w3schools.com/php/php_ajax_livesearch.asp

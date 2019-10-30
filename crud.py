@@ -7,7 +7,9 @@ from datetime import datetime
 from elasticsearch import Elasticsearch
 
 app = Flask(__name__)
-es = Elasticsearch('10.0.1.69')
+es = Elasticsearch("192.168.1.5")
+
+
 ######### Funções
 
 
@@ -39,7 +41,7 @@ def search():
 	temp_var = ""
 	if len(search_result) > 0:
 		for i in range(len(search_result)):
-			temp_var = temp_var + search_result[i] + "<p style='margin-block-start: 4px; margin-block-end: 4px;'>"
+			temp_var = temp_var + "<a href='http://localhost/search?q="+ search_result[i] +"' style='text-decoration:none'>" + search_result[i] + "</a><p style='margin-block-start: 4px; margin-block-end: 4px;'>"
 	else:
 		temp_var = "nenhum valor encontrado! Tente a letra <b>J</b>" 
 	
