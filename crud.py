@@ -46,6 +46,7 @@ def search():
 			## 1 - Testar OnClick com uma funcao Alert contendo o texto.
 			## 2 - Funcionando o passo 1, substituir a funcao Alert para a selecao de busca.
 			# Passar LI
+			# Validar a possibilidade de passar Json com os dados ao inves de enviar a TAG HTML completa.
 	else:
 		temp_var = "nenhum valor encontrado! Tente a letra <b>J</b>" 
 	
