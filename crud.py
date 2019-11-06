@@ -42,6 +42,10 @@ def search():
 	if len(search_result) > 0:
 		for i in range(len(search_result)):
 			temp_var = temp_var + "<a href='http://localhost/search?q="+ search_result[i] +"' style='text-decoration:none'>" + search_result[i] + "</a><p style='margin-block-start: 4px; margin-block-end: 4px;'>"
+			# Substituir A com HREF por uma DIV com Evento OnClick
+			## 1 - Testar OnClick com uma funcao Alert contendo o texto.
+			## 2 - Funcionando o passo 1, substituir a funcao Alert para a selecao de busca.
+			# Passar LI
 	else:
 		temp_var = "nenhum valor encontrado! Tente a letra <b>J</b>" 
 	
